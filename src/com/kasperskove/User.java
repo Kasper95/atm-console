@@ -30,8 +30,8 @@ class User {
         return pin;
     }
 
-    void setPin(String pin) {
-        this.pin = Integer.parseInt(pin);
+    void setPin(int pin) {
+        this.pin = pin;
     }
 
     Double getBalance() {
