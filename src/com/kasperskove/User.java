@@ -43,6 +43,16 @@ class User {
     }
 
     void setBalance() {
-        this.balance = (double) Math.round(Math.random() * 1000);
+        this.balance = (double) Math.round(Math.random() * 10000);
+    }
+
+    void withdraw (Double amount) {
+        // adding logic to prevent overdrawing from account balance
+        if (amount > balance) {
+            System.out.printf("Sorry, you only have %s in your account. Enter a different amount...\n\n", balance);
+        } else {
+            balance = balance - amount;
+            System.out.printf("You have %s remaining in your account.\n\n", balance);
+        }
     }
 }

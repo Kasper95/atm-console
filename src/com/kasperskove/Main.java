@@ -19,6 +19,28 @@ public class Main {
         System.out.printf("Please SET a four digit pin number... ");
         user.setPin(scanner.nextLine()); user.setBalance();
 
-        System.out.printf("%s, your pin is %s\n your balance is %s", user.getUserName(), user.getPin(), user.getBalance());
+        /* Showing three options
+            looping options until user cancels */
+
+        while (true) {
+
+            System.out.println("Choose an option:\n" +
+                    "[1] Check Balance\n" +
+                    "[2] Withdraw\n" +
+                    "[3] Delete Account\n" +
+                    "Cancel Transaction\n");
+            String option = scanner.nextLine();
+
+            switch (option) {
+                case "1":
+                    System.out.printf("Your balance is $%s\n", user.getBalance());
+                    break;
+
+                case "2":
+                    System.out.printf("Enter withdraw amount\n");
+                    Double withdraw = Double.valueOf(scanner.nextLine());
+                    user.withdraw(withdraw);
+            }
+        }
     }
 }
