@@ -4,24 +4,16 @@ import java.util.Scanner;
 
 public class Terminal {
 
-    public static void run() throws NumberFormatException {
+    User user = new User();
+
+    static void run() {
 
         Scanner scanner = new Scanner(System.in);
+        User user = new User();
+
+        signIn(user);
 
         while (true) {
-
-            // prompt user for their username and pin
-            System.out.println("Welcome... \nPlease sign in by entering your username...\n");
-            // creating new User instance and setting userName to entered String
-            User user = new User();
-            user.setUserName(scanner.nextLine());
-
-            if (!user.hasPin()) {
-                System.out.printf("Please SET a four digit pin number... ");
-                user.setPin(scanner.nextInt());
-            }
-
-            user.setBalance();
 
         /* Showing three options
             looping options until user cancels */
@@ -32,7 +24,8 @@ public class Terminal {
                         "[1] Check Balance\n" +
                         "[2] Withdraw\n" +
                         "[3] Delete Account\n" +
-                        "[4]Cancel Transaction\n");
+                        "[4] Sign Out\n" +
+                        "[5] Close ATM");
                 String option = scanner.nextLine();
 
                 switch (option) {
@@ -61,8 +54,38 @@ public class Terminal {
                         System.out.println("Transaction canceled.\n\n");
                         t = 2;
                         break;
+
+                    case "5":
+                        System.out.println("Closing ATM...    ");
+                        System.exit(0);
+                        break;
                 }
             }
         }
+    }
+
+    private static User signIn (User user) {
+
+        if (user.getUserName() == null) {
+
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.println("Welcome... \nPlease sign in by entering your username...\n");
+
+            // creating new User instance and setting userName to entered String
+            user.setUserName(scanner.nextLine());
+            System.out.printf("Welcome, %s, we've created an account for you...%n", user.getUserName());
+
+            // if user has a pin already, they do not need to create one, but rather enter it in
+            if (!user.hasPin()) {
+                System.out.printf("Please SET a four digit pin number... %n");
+                user.setPin(scanner.nextInt());
+            } else {
+                // TODO: prompt for pin and validate
+            }
+            user.setBalance();
+        }
+
+        return user;
     }
 }
