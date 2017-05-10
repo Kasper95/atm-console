@@ -88,4 +88,6 @@ public class Terminal {
 
         return user;
     }
+
+    private
 }

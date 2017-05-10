@@ -6,7 +6,7 @@ package com.kasperskove;
 class User {
 
     private String userName;
-    private int pin;
+    private Integer pin;
     private Double balance;
 
     User(String userName, int pin, Double balance) {
@@ -26,21 +26,16 @@ class User {
         this.userName = userName;
     }
 
-    int getPin() {
+    Integer getPin() {
         return pin;
     }
 
-    void setPin(int pin) {
+    void setPin(Integer pin) {
         this.pin = pin;
     }
 
     boolean hasPin(){
-
-        if (String.valueOf(pin) == null) {
-            return false;
-        } else {
-            return true;
-        }
+        return pin != null;
     }
 
     Double getBalance() {
