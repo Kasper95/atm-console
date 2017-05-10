@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca67b0d6-530a-402a-a4bf-b5dcda2e4806" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kasperskove/User.java" afterPath="$PROJECT_DIR$/src/com/kasperskove/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/kasperskove/Terminal.java" afterPath="$PROJECT_DIR$/src/com/kasperskove/Terminal.java" />
     </list>
     <ignored path="atm-console.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,9 +36,13 @@
       <file leaf-file-name="Terminal.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/kasperskove/Terminal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="79" column="30" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
-              <folding />
+            <state relative-caret-position="330">
+              <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+              <folding>
+                <element signature="e#209#263#0" expanded="false" />
+                <element signature="e#2538#2539#0" expanded="true" />
+                <element signature="e#2585#2586#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -46,8 +50,8 @@
       <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/kasperskove/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+            <state relative-caret-position="105">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
                 <element signature="docComment;class#User#0" expanded="false" />
                 <element signature="method#User#1;class#User#0" expanded="false" />
@@ -79,8 +83,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/com/kasperskove/entities/User.java" />
         <option value="$PROJECT_DIR$/src/com/kasperskove/Main.java" />
-        <option value="$PROJECT_DIR$/src/com/kasperskove/Terminal.java" />
         <option value="$PROJECT_DIR$/src/com/kasperskove/User.java" />
+        <option value="$PROJECT_DIR$/src/com/kasperskove/Terminal.java" />
       </list>
     </option>
   </component>
@@ -431,6 +435,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="ca67b0d6-530a-402a-a4bf-b5dcda2e4806" name="Default" comment="" />
@@ -443,7 +450,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1366" height="677" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -453,7 +460,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930514" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -513,18 +520,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/kasperskove/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-          <folding>
-            <element signature="docComment;class#User#0" expanded="false" />
-            <element signature="method#User#1;class#User#0" expanded="false" />
-            <element signature="method#withdraw#0;class#User#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kasperskove/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -533,11 +528,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/kasperskove/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#User#0" expanded="false" />
+            <element signature="method#User#1;class#User#0" expanded="false" />
+            <element signature="method#withdraw#0;class#User#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/kasperskove/Terminal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="79" column="30" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
-          <folding />
+        <state relative-caret-position="330">
+          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+          <folding>
+            <element signature="e#209#263#0" expanded="false" />
+            <element signature="e#2538#2539#0" expanded="true" />
+            <element signature="e#2585#2586#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

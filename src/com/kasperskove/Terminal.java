@@ -2,30 +2,26 @@ package com.kasperskove;
 
 import java.util.Scanner;
 
-public class Terminal {
+class Terminal {
 
-    User user = new User();
+    private static User user = new User();
+    private static Scanner scanner = new Scanner(System.in);
+
 
     static void run() {
+        // showing options. looping options until user cancels
 
-        Scanner scanner = new Scanner(System.in);
-        User user = new User();
+//        int t = 1;
 
-        signIn(user);
+        System.out.printf("%s", user.getUserName());
 
         while (true) {
 
-        /* Showing three options
-            looping options until user cancels */
-            int t = 1;
-            while (t == 1) {
+            signIn(user);
 
-                System.out.println("Choose an option:\n" +
-                        "[1] Check Balance\n" +
-                        "[2] Withdraw\n" +
-                        "[3] Delete Account\n" +
-                        "[4] Sign Out\n" +
-                        "[5] Close ATM");
+            do {
+
+                System.out.printf(prompt());
                 String option = scanner.nextLine();
 
                 switch (option) {
@@ -36,23 +32,24 @@ public class Terminal {
                     case "2":
                         System.out.printf("Enter withdraw amount\n");
                         Double withdraw = Double.valueOf(scanner.nextLine());
-                        user.withdraw(withdraw);
+                        Terminal.user.withdraw(withdraw);
                         break;
 
                     case "3":
                         System.out.println("To delete your account. Enter your four digit pin...\n");
                         int pin = scanner.nextInt();
                         if (pin == user.getPin()) {
-                            user = null;
-                            t = 2;
+                            user.setPin(null);
+                            signOut(user);
                         } else {
                             System.out.println("Invalid Pin...\n");
                         }
                         break;
 
                     case "4":
-                        System.out.println("Transaction canceled.\n\n");
-                        t = 2;
+                        System.out.println("Transaction canceled" +
+                                "\nSigning out... \n");
+                        signOut(Terminal.user);
                         break;
 
                     case "5":
@@ -60,34 +57,35 @@ public class Terminal {
                         System.exit(0);
                         break;
                 }
-            }
+            } while (user.getUserName() != null);
         }
     }
 
-    private static User signIn (User user) {
+    private static void signIn(User user) {
 
-        if (user.getUserName() == null) {
-
-            Scanner scanner = new Scanner(System.in);
-
+        if (Terminal.user.getUserName() == null) {
             System.out.println("Welcome... \nPlease sign in by entering your username...\n");
+            Terminal.user.setUserName(scanner.nextLine());
+            Terminal.user.setBalance();
+            System.out.printf("Welcome, %s, we've created an account for you...%n%n", Terminal.user.getUserName());
+            System.out.printf("Please SET a four digit pin number:         ");
+            user.setPin(scanner.nextInt());
+        } else {
 
-            // creating new User instance and setting userName to entered String
-            user.setUserName(scanner.nextLine());
-            System.out.printf("Welcome, %s, we've created an account for you...%n", user.getUserName());
-
-            // if user has a pin already, they do not need to create one, but rather enter it in
-            if (!user.hasPin()) {
-                System.out.printf("Please SET a four digit pin number... %n");
-                user.setPin(scanner.nextInt());
-            } else {
-                // TODO: prompt for pin and validate
-            }
-            user.setBalance();
         }
-
-        return user;
     }
 
-    private
+    private static void signOut (User user) {
+        Terminal.user.setUserName(null);
+    }
+
+    private static String prompt(){
+        String options = "Choose an option:\n" +
+                "[1] Check Balance\n" +
+                "[2] Withdraw\n" +
+                "[3] Delete Account\n" +
+                "[4] Sign Out\n" +
+                "[5] Close ATM\n\n";
+        return options;
+    }
 }
