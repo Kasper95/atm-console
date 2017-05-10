@@ -34,6 +34,15 @@ class User {
         this.pin = pin;
     }
 
+    boolean hasPin(){
+
+        if (String.valueOf(pin) == null) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
     Double getBalance() {
         return balance;
     }
